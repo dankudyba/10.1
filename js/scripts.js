@@ -10,11 +10,10 @@ span.each(function(index, element){
 var paragraphs = $('p');
 
 paragraphs.each(function(index, element){
-	var btn = '<button class="btn" data-tmp=""' + index + '"">Click me</button>'
+	var btn = '<button class="btn" data-tmp="' + index + '">Click me</button>'
 	$(element).append(btn);
 });
 
-$("btn").click(function(){
+$("button").on('click', function(){
 	alert($(this).attr("data-tmp"));
-	console.log('aaa');
 });
